@@ -1,0 +1,8 @@
+name: AncientCrafts
+main: cn.disputemc.ancientcrafts
+version: "0.0.1"
+api: [ "1.0.14" ]
+load: POSTWORLD
+author: CivicXFB
+description: "远古工艺插件"
+prefix: "AncientCrafts"

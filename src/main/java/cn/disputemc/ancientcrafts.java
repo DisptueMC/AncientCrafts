@@ -1,6 +1,7 @@
 package cn.disputemc;
 
 import cn.disputemc.item.itemCuprumAxe;
+import cn.disputemc.item.mineral.itemalloybronze;
 import cn.disputemc.utils.RecipeManagerTools;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
@@ -21,7 +22,7 @@ public class ancientcrafts extends PluginBase implements Listener {
         instance = this;
         log = this.getLogger();
         try {
-                Item.registerCustomItem(List.of(itemCuprumAxe.class));
+                Item.registerCustomItem(List.of(itemCuprumAxe.class, itemalloybronze.class));
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException |
                  InvocationTargetException e){
             log.info("远古工艺加载失败");
