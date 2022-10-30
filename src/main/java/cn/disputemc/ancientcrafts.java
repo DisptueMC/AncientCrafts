@@ -1,12 +1,18 @@
 package cn.disputemc;
 
+import cn.disputemc.block.bronze_block;
 import cn.disputemc.item.itemCuprumAxe;
 import cn.disputemc.item.mineral.itemalloybronze;
 import cn.disputemc.utils.RecipeManagerTools;
+import cn.nukkit.block.Block;
+import cn.nukkit.entity.Entity;
+import cn.nukkit.entity.provider.CustomClassEntityProvider;
+import cn.nukkit.entity.provider.CustomEntityProvider;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerJoinEvent;
 import cn.nukkit.item.Item;
+import cn.nukkit.item.customitem.ItemCustom;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.plugin.PluginLogger;
 
@@ -23,6 +29,11 @@ public class ancientcrafts extends PluginBase implements Listener {
         log = this.getLogger();
         try {
                 Item.registerCustomItem(List.of(itemCuprumAxe.class, itemalloybronze.class));
+                Block.registerCustomBlock(List.of(bronze_block.class));
+                /**
+                 * 设置自定义生物
+                Entity.registerCustomEntity(new CustomClassEntityProvider());
+                 */
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException |
                  InvocationTargetException e){
             log.info("远古工艺加载失败");

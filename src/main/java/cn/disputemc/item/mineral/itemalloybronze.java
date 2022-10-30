@@ -6,6 +6,7 @@ import cn.nukkit.item.customitem.data.ItemCreativeCategory;
 
 public class itemalloybronze extends ItemCustom {
     public itemalloybronze(){
+
         super("yes:alloy_bronze",null,"alloy_bronze");
     }
 
